@@ -26,6 +26,7 @@ if ! gcloud sql instances describe "$INSTANCE" >/dev/null 2>&1; then
     --storage-size=100 \
     --storage-type=SSD \
     --availability-type=regional \
+    --enable-bin-log \
     --zone="$ZONE" \
     --root-password="$ROOT_PASSWORD" \
     --quiet
